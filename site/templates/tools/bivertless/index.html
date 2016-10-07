@@ -1,0 +1,21 @@
+<h1>Bivertless - DMG ROM Palette Inverter</h1>
+<p>
+  This is a proof of concept that allows you to take a DMG ROM and invert the colors. Do not expect it to work for every ROM. Bivertless has solely been tested on Tetris and a piece of homebrew...Both methods are a work in progress.
+</p>
+
+<p>
+  <strong>I do not advocate using this as a bivert chip replacement.</strong>
+</p>
+<div>
+  <input type="file" id="rom"/><button id="go">Invert!</button>
+</div>
+<br/>
+<div>
+  <input id="method1" type="checkbox" value="rstHack"/> RST Hack<br/>
+  <input id="method2" type="checkbox" checked="checked" value="intelligentReplacement"/> Intelligent Replacement
+</div>
+<p>
+  Note: These can both be applied at once.
+</p>
+
+<script src="/scripts/tools/bivertless/client.js"></script>

@@ -32,8 +32,14 @@ const index = [
         name: 'Resources',
         links: [
             { link: 'http://gbdev.gg8.se/wiki/', text: 'gbdev Wiki' },
-            { link: '/archive', text: 'gameboy.tech Archive' },
-            { link: 'http://bgb.bircd.org/', text: 'BGB Emulator' }
+            { link: '/archive', text: 'gameboy.tech Archive' }
+        ]
+    },
+    {
+        name: 'Tools',
+        links: [
+            { link: 'http://bgb.bircd.org/', text: 'BGB Emulator' },
+            { link: '/tools/bivertless', text: 'Invert DMG ROM' }
         ]
     },
     {
@@ -79,12 +85,22 @@ const pages = {
 
             return $scope;
         }
+    },
+    '/tools/bivertless': {
+        template: 'master.html',
+        controller: function ($scope, $path) {
+
+            $scope.title = ' | Tools';
+            $scope.content = $compile($path + '/index.html')({});
+
+            return $scope;
+        }
     }
 };
 
 for(let key in pages) {
     e.get(key, (req, res) => {
-        const html = $compile(pages[key].template)(pages[key].controller($rootScope));
+        const html = $compile(pages[key].template)(pages[key].controller($rootScope, key));
         res.send(html);
     });
 }

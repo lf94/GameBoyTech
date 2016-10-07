@@ -1,3 +1,10 @@
+@media (min-width: 60em) {
+    .content {
+        width: 60em;
+        margin: auto;
+    }
+}
+
 .fill-page {
     height: 100%;
     margin: 0;

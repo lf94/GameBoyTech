@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "angular-template": "^2.0.11",
-    "express": "^4.14.0"
+    "bivertless": "git+https://github.com/lf94/Bivertless.git",
+    "express": "^4.14.0",
+    "file-saver": "^1.3.3"
   },
   "devDependencies": {},
   "scripts": {
