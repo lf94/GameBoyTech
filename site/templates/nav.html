@@ -1,0 +1,19 @@
+<h3>Index</h3>
+<table>
+  <thead>
+    <tr>
+      <th ng-repeat="header in table.headings">
+        {{ header }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in table.rows">
+      <td ng-repeat="col in row">
+        <div ng-if="col !== undefined">
+          <a href="{{ col.link }}">{{ col.text }}</a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

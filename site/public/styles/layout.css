@@ -1,0 +1,13 @@
+.fill-page {
+    height: 100%;
+    margin: 0;
+    border: 0;
+}
+
+.center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a img { border: 0; }
